@@ -40,7 +40,3 @@ CREATE TABLE invoice_items (
   invoice_id INT FOREIGN KEY REFERENCES invoices (id),
   treatment_id INT FOREIGN KEY REFERENCES treatments (id)
 );
-
-
-
-
