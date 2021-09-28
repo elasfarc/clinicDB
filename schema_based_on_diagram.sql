@@ -32,6 +32,15 @@ CREATE TABLE invoices (
   medical_history_id INT FOREIGN KEY REFERENCES medical_histories (id) 
 );
 
+CREATE TABLE invoice_items (
+  id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+  unit_price DECIMAL,
+  quantity INT,
+  total_price DECIMAL,
+  invoice_id INT FOREIGN KEY REFERENCES invoices (id),
+  treatment_id INT FOREIGN KEY REFERENCES treatments (id)
+);
+
 
 
 
